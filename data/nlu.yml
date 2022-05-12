@@ -1,94 +1,104 @@
-version: "3.1"
+version: "2.0"
 
 nlu:
-- intent: greet
+- intent: greetings
   examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
     - oi
-    - salve
-    - ola!
+    - olá
+    - ola
+    - eae
+    - oi bot
+    - opa
+    - bom dia
+    - boa tarde
+    - boa noite
+    - Opa meu consagrado
+    - Fala campeão
+    - Eae meu rei
+    - Salve
+    - Timo
 
 - intent: goodbye
   examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
+    - até mais
+    - até breve
+    - valeu
+    - falou
+    - flw
     - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
+    - tenha um bom dia
+    - tenha uma boa noite
+    - até
+    - adios
 
-- intent: affirm
+- intent: readytoorder
   examples: |
-    - yes
-    - y
-    - indeed
-    - of course
-    - that sounds good
-    - correct
+    - estou pronto para pedir
+    - quero pedir
+    - quero fazer um pedido
+    - pedido
+    - estou pronto
+    - pronto
+    - gostaria de pedir
+    - pronto para pedir
 
-- intent: deny
+- intent: foodquestion
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - O que vem na pizza de [frango]{"entity": "prato", "value": "frango"}
+    - Quais os ingredientes da pizza de [bacon]{"entity": "prato", "value": "bacon"}
+    - O que acompanha a pizza [califórnia]{"entity": "prato", "value": "california"}
+    - Tem [cebola]{"entity": "ingrediente", "value": "cebola"} na [baiana]{"entity": "prato", "value": "baiana"}
+    - Quantas pessoas serve a pizza de [palmito com catupiry]{"entity": "prato", "value": "palmito com catupiry"}
+    - Serve quantos pessoas a [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"}
+    - Pode tirar [milho]{"entity": "ingrediente"} da [portuguesa]{"entity": "prato", "value": "portuguesa"} 
+    - Qual o tamanho da [coca-cola]{"entity": "bebida", "value": "coca cola"}
+    - A pizza de [frango com catupiry]{"entity": "prato", "value": "frango com catupiry"} é feita com [requeijão]{"entity": "ingrediente", "value": "requeijao"} ou [catupiry]{"entity": "ingrediente", "value": "catupiry"}
 
-- intent: mood_great
+- intent: order
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - Vou querer uma pizza de [atum]{"entity": "prato", "value": "atum"}[extra grande]{"entity": "tamanho", "value": "extra grande"}
+    - Gostaria de uma pizza de [bacon]{"entity": "prato", "value": "bacon"}
+    - Me vê uma [baiana]{"entity": "prato", "value": "baiana"}
+    - Vou querer uma [calabresa]{"entity": "prato", "value": "calabresa"}
+    - Manda uma pizza de [frango]{"entity": "prato", "value": "frango"}
+    - Me manda uma [frango com catupiry]{"entity": "prato", "value": "frango com catupiry"}
+    - Desejo uma [filé com catupiry]{"entity": "prato", "value": "filé com catupiry"} [metro sem borda]{"entity": "tamanho", "value": "metro sem borda"}
+    - Quero pedir uma pizza de [filé com rúcula]{"entity": "prato", "value": "filé com rúcula"}
+    - Gostaria de pedir uma [lombo canadense]{"entity": "prato", "value": "lombo canadense"}
+    - Quero uma pizza [marguerita]{"entity": "prato", "value": "marguerita"}
+    - Uma [milho verde]{"entity": "prato", "value": "milho verde"} [metro com borda]{"entity": "tamanho", "value": "metro com borda"}
+    - Vai ser uma [moda da casa]{"entity": "prato", "value": "moda da casa"}
+    - Gostaria de uma [mussarela]{"entity": "prato", "value": "mussarela"} [grande]{"entity": "tamanho", "value": "grande"} e uma de [banana]{"entity": "prato", "value": "banana"}
+    - Vou querer um [napolitana]{"entity": "prato", "value": "napolitana"}
+    - Vou querer uma pizza de [palmito]{"entity": "prato", "value": "palmito"} e de [brigadeiro]{"entity": "prato", "value": "brigadeiro"}
+    - Vou querer uma [palmito com catupiry]{"entity": "prato", "value": "palmito com catupiry"}
+    - Vou querer uma [portuguesa]{"entity": "prato", "value": "portuguesa"}
+    - Gostaria de uma pizza de [quatro queijos]{"entity": "prato", "value": "quatro queijos"} e uma pizza [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"}
+    - Vou querer uma [strogonoff]{"entity": "prato", "value": "strogonoff"} e uma [coca-cola]{"entity": "bebida", "value": "coca-cola"}
+    - Vou querer um [salaminho ao caputiry]{"entity": "prato", "value": "salaminho ao caputiry"}
+    - Vou querer duas pizzas de [sanduba]{"entity": "prato", "value": "sanduba"} e uma [coca-cola]{"entity": "bebida", "value": "coca cola"}
+    - Vou querer tres [califórnia]{"entity": "prato", "value": "california"} [metro s/ borda]{"entity": "tamanho", "value": "metro s/ borda"}
+    - Vou querer duas de [chocolate]{"entity": "prato", "value": "chocolate"}
+    - Vou querer uma [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"} [pequena]{"entity": "tamanho", "value": "pequena"}
+    - Vou querer uma [brigadeiro]{"entity": "prato", "value": "brigadeiro"} [media]{"entity": "tamanho", "value": "media"}
+    - Gostaria de pedir uma [lombo canadense]{"entity": "prato", "value": "lombo canadense"} e uma [coca]{"entity": "bebida", "value": "coca"}
+    - Quero pedir uma pizza de [filé com rúcula]{"entity": "prato", "value": "filé com rúcula"} e um [guarana]{"entity": "bebida", "value": "guarana"}
+    - Gostaria de uma pizza de [bacon]{"entity": "prato", "value": "bacon"} e 
 
-- intent: mood_unhappy
+- intent: callwaiter
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
-    - sad
-    - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - Nao temos guardanapos
+    - Precisamos de guardanapos
+    - Sujamos a mesa
+    - Derrubamos na mesa
+    - Onde fica o banheiro
+    - Quero falar com o garçom
+    - Gostaria de falar com o garçom
 
-- intent: bot_challenge
+- intent: question
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
+    - Tenho uma dúvida
+    - Quero fazer uma pergunta
+    - Timo me tira uma duvida
+    - pergunta
+    - duvida
