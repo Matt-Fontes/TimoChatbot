@@ -28,3 +28,26 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
+
+- story: cumprimento
+  steps:
+  - intent: greetings
+  - action: utter_greet
+  - intent: order
+  - action: utter_cheer_up
+
+- story: interactive_story_1
+  steps:
+  - intent: greetings
+  - action: utter_greet
+  - intent: order
+  - action: utter_cheer_up
+
+- story: interactive_story_1
+  steps:
+  - intent: greetings
+  - action: utter_greet
+  - intent: order
+    entities:
+    - prato: baiana
+  - action: utter_cheer_up

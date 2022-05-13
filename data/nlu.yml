@@ -1,5 +1,4 @@
-version: "2.0"
-
+version: "3.1"
 nlu:
 - intent: greetings
   examples: |
@@ -17,7 +16,6 @@ nlu:
     - Eae meu rei
     - Salve
     - Timo
-
 - intent: goodbye
   examples: |
     - até mais
@@ -30,7 +28,6 @@ nlu:
     - tenha uma boa noite
     - até
     - adios
-
 - intent: readytoorder
   examples: |
     - estou pronto para pedir
@@ -41,50 +38,49 @@ nlu:
     - pronto
     - gostaria de pedir
     - pronto para pedir
-
 - intent: foodquestion
   examples: |
-    - O que vem na pizza de [frango]{"entity": "prato", "value": "frango"}
-    - Quais os ingredientes da pizza de [bacon]{"entity": "prato", "value": "bacon"}
+    - O que vem na pizza de [frango](prato)
+    - Quais os ingredientes da pizza de [bacon](prato)
     - O que acompanha a pizza [califórnia]{"entity": "prato", "value": "california"}
-    - Tem [cebola]{"entity": "ingrediente", "value": "cebola"} na [baiana]{"entity": "prato", "value": "baiana"}
-    - Quantas pessoas serve a pizza de [palmito com catupiry]{"entity": "prato", "value": "palmito com catupiry"}
-    - Serve quantos pessoas a [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"}
-    - Pode tirar [milho]{"entity": "ingrediente"} da [portuguesa]{"entity": "prato", "value": "portuguesa"} 
+    - Tem [cebola](ingrediente) na [baiana](prato)
+    - Quantas pessoas serve a pizza de [palmito com catupiry](prato)
+    - Serve quantos pessoas a [romeu e julieta](prato)
+    - Pode tirar [milho](ingrediente) da [portuguesa](prato)
     - Qual o tamanho da [coca-cola]{"entity": "bebida", "value": "coca cola"}
-    - A pizza de [frango com catupiry]{"entity": "prato", "value": "frango com catupiry"} é feita com [requeijão]{"entity": "ingrediente", "value": "requeijao"} ou [catupiry]{"entity": "ingrediente", "value": "catupiry"}
-
+    - A pizza de [frango com catupiry](prato) é feita com [requeijão]{"entity": "ingrediente", "value": "requeijao"} ou [catupiry](ingrediente)
 - intent: order
   examples: |
-    - Vou querer uma pizza de [atum]{"entity": "prato", "value": "atum"}[extra grande]{"entity": "tamanho", "value": "extra grande"}
-    - Gostaria de uma pizza de [bacon]{"entity": "prato", "value": "bacon"}
-    - Me vê uma [baiana]{"entity": "prato", "value": "baiana"}
-    - Vou querer uma [calabresa]{"entity": "prato", "value": "calabresa"}
-    - Manda uma pizza de [frango]{"entity": "prato", "value": "frango"}
-    - Me manda uma [frango com catupiry]{"entity": "prato", "value": "frango com catupiry"}
-    - Desejo uma [filé com catupiry]{"entity": "prato", "value": "filé com catupiry"} [metro sem borda]{"entity": "tamanho", "value": "metro sem borda"}
-    - Quero pedir uma pizza de [filé com rúcula]{"entity": "prato", "value": "filé com rúcula"}
-    - Gostaria de pedir uma [lombo canadense]{"entity": "prato", "value": "lombo canadense"}
-    - Quero uma pizza [marguerita]{"entity": "prato", "value": "marguerita"}
-    - Uma [milho verde]{"entity": "prato", "value": "milho verde"} [metro com borda]{"entity": "tamanho", "value": "metro com borda"}
-    - Vai ser uma [moda da casa]{"entity": "prato", "value": "moda da casa"}
-    - Gostaria de uma [mussarela]{"entity": "prato", "value": "mussarela"} [grande]{"entity": "tamanho", "value": "grande"} e uma de [banana]{"entity": "prato", "value": "banana"}
-    - Vou querer um [napolitana]{"entity": "prato", "value": "napolitana"}
-    - Vou querer uma pizza de [palmito]{"entity": "prato", "value": "palmito"} e de [brigadeiro]{"entity": "prato", "value": "brigadeiro"}
-    - Vou querer uma [palmito com catupiry]{"entity": "prato", "value": "palmito com catupiry"}
-    - Vou querer uma [portuguesa]{"entity": "prato", "value": "portuguesa"}
-    - Gostaria de uma pizza de [quatro queijos]{"entity": "prato", "value": "quatro queijos"} e uma pizza [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"}
-    - Vou querer uma [strogonoff]{"entity": "prato", "value": "strogonoff"} e uma [coca-cola]{"entity": "bebida", "value": "coca-cola"}
-    - Vou querer um [salaminho ao caputiry]{"entity": "prato", "value": "salaminho ao caputiry"}
-    - Vou querer duas pizzas de [sanduba]{"entity": "prato", "value": "sanduba"} e uma [coca-cola]{"entity": "bebida", "value": "coca cola"}
-    - Vou querer tres [califórnia]{"entity": "prato", "value": "california"} [metro s/ borda]{"entity": "tamanho", "value": "metro s/ borda"}
-    - Vou querer duas de [chocolate]{"entity": "prato", "value": "chocolate"}
-    - Vou querer uma [romeu e julieta]{"entity": "prato", "value": "romeu e julieta"} [pequena]{"entity": "tamanho", "value": "pequena"}
-    - Vou querer uma [brigadeiro]{"entity": "prato", "value": "brigadeiro"} [media]{"entity": "tamanho", "value": "media"}
-    - Gostaria de pedir uma [lombo canadense]{"entity": "prato", "value": "lombo canadense"} e uma [coca]{"entity": "bebida", "value": "coca"}
-    - Quero pedir uma pizza de [filé com rúcula]{"entity": "prato", "value": "filé com rúcula"} e um [guarana]{"entity": "bebida", "value": "guarana"}
-    - Gostaria de uma pizza de [bacon]{"entity": "prato", "value": "bacon"} e 
-
+    - Vou querer uma pizza de [atum](prato)[extra grande](tamanho)
+    - Gostaria de uma pizza de [bacon](prato)
+    - Me vê uma [baiana](prato)
+    - Vou querer uma [calabresa](prato)
+    - Manda uma pizza de [frango](prato)
+    - Me manda uma [frango com catupiry](prato)
+    - Desejo uma [filé com catupiry](prato) [metro sem borda](tamanho)
+    - Quero pedir uma pizza de [filé com rúcula](prato)
+    - Gostaria de pedir uma [lombo canadense](prato)
+    - Quero uma pizza [marguerita](prato)
+    - Uma [milho verde](prato) [metro com borda](tamanho)
+    - Vai ser uma [moda da casa](prato)
+    - Gostaria de uma [mussarela](prato) [grande](tamanho) e uma de [banana](prato)
+    - Vou querer um [napolitana](prato)
+    - Vou querer uma pizza de [palmito](prato) e de [brigadeiro](prato)
+    - Vou querer uma [palmito com catupiry](prato)
+    - Vou querer uma [portuguesa](prato)
+    - Gostaria de uma pizza de [quatro queijos](prato) e uma pizza [romeu e julieta](prato)
+    - Vou querer uma [strogonoff](prato) e uma [coca-cola](bebida)
+    - Vou querer um [salaminho ao caputiry](prato)
+    - Vou querer duas pizzas de [sanduba](prato) e uma [coca-cola]{"entity": "bebida", "value": "coca cola"}
+    - Vou querer tres [califórnia]{"entity": "prato", "value": "california"} [metro s/ borda](tamanho)
+    - Vou querer duas de [chocolate](prato)
+    - Vou querer uma [romeu e julieta](prato) [pequena](tamanho)
+    - Vou querer uma [brigadeiro](prato) [media](tamanho)
+    - Gostaria de pedir uma [lombo canadense](prato) e uma [coca](bebida)
+    - Quero pedir uma pizza de [filé com rúcula](prato) e um [guarana](bebida)
+    - Gostaria de uma pizza de [bacon](prato) e
+    - Sim
+    - Me vê uma [baiana](prato)
 - intent: callwaiter
   examples: |
     - Nao temos guardanapos
@@ -94,7 +90,6 @@ nlu:
     - Onde fica o banheiro
     - Quero falar com o garçom
     - Gostaria de falar com o garçom
-
 - intent: question
   examples: |
     - Tenho uma dúvida
@@ -102,3 +97,12 @@ nlu:
     - Timo me tira uma duvida
     - pergunta
     - duvida
+- synonym: california
+  examples: |
+    - califórnia
+- synonym: coca cola
+  examples: |
+    - coca-cola
+- synonym: requeijao
+  examples: |
+    - requeijão

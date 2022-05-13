@@ -1,34 +1,36 @@
-version: "3.1"
-
+version: '3.1'
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
+- affirm
+- bot_challenge
+- deny
+- goodbye
+- greet
+- greetings
+- mood_great
+- mood_unhappy
+- order
+entities:
+- prato
+- bebida
+- tamanho
+- indrediente
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
+  - text: Olá, bem vindo ao restaurante CyberKing, gostaria de fazer um pedido?
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
+  - text: 'Aqui está nosso cardápio:'
+    image: Link do cardápio
   utter_did_that_help:
-  - text: "Did that help you?"
-
+  - text: Did that help you?
   utter_happy:
-  - text: "Great, carry on!"
-
+  - text: Great, carry on!
   utter_goodbye:
-  - text: "Bye"
-
+  - text: Bye
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+  - text: I am a bot, powered by Rasa.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+actions:
+- utter_cheer_up
+- utter_greet

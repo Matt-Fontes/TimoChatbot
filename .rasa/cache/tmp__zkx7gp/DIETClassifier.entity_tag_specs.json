@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-bebida",
+      "2": "I-bebida",
+      "3": "L-bebida",
+      "4": "U-bebida",
+      "5": "B-ingrediente",
+      "6": "I-ingrediente",
+      "7": "L-ingrediente",
+      "8": "U-ingrediente",
+      "9": "B-prato",
+      "10": "I-prato",
+      "11": "L-prato",
+      "12": "U-prato",
+      "13": "B-tamanho",
+      "14": "I-tamanho",
+      "15": "L-tamanho",
+      "16": "U-tamanho",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-bebida": 1,
+      "I-bebida": 2,
+      "L-bebida": 3,
+      "U-bebida": 4,
+      "B-ingrediente": 5,
+      "I-ingrediente": 6,
+      "L-ingrediente": 7,
+      "U-ingrediente": 8,
+      "B-prato": 9,
+      "I-prato": 10,
+      "L-prato": 11,
+      "U-prato": 12,
+      "B-tamanho": 13,
+      "I-tamanho": 14,
+      "L-tamanho": 15,
+      "U-tamanho": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]
