@@ -1,0 +1,53 @@
+{
+    "prato": [
+        {
+            "atum": {
+                "ingredientes": [
+                    "molho",
+                    "cebola",
+                    "atum",
+                    "mussarela",
+                    "azeitona",
+                    "orégano"
+                ]
+            }
+        },
+        {
+            "bacon": {
+                "ingredientes": [
+                    "molho",
+                    "mussarela",
+                    "bacon",
+                    "tomate",
+                    "azeitona",
+                    "orégano"
+                ]
+            }
+        },
+        {
+            "baiana": {
+                "ingredientes": [
+                    "molho",
+                    "mussarela",
+                    "azeitona",
+                    "orégano",
+                    "bacon",
+                    "pimenta",
+                    "calabresa",
+                    "presunto"
+                ]
+            }
+        },
+        {
+            "frango": {
+                "ingredientes": [
+                    "molho",
+                    "mussarela",
+                    "azeitona",
+                    "orégano",
+                    "frango"
+                ]
+            }
+        }
+    ]
+}
