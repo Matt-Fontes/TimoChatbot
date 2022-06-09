@@ -2,52 +2,68 @@ version: "3.1"
 
 stories:
 
-- story: happy path
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
+# - story: happy path
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_great
+#   - action: utter_happy
 
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: affirm
-  - action: utter_happy
+# - story: sad path 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: affirm
+#   - action: utter_happy
 
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
-  - action: utter_goodbye
+# - story: sad path 2
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: mood_unhappy
+#   - action: utter_cheer_up
+#   - action: utter_did_that_help
+#   - intent: deny
+#   - action: utter_goodbye
 
-- story: cumprimento
+# - story: cumprimento
+#   steps:
+#   - intent: greetings
+#   - action: utter_greet
+#   - intent: order
+#   - action: utter_cheer_up
+
+- story: ver cardapio
   steps:
   - intent: greetings
   - action: utter_greet
-  - intent: order
-  - action: utter_cheer_up
+  - intent: positivo
+  - action: utter_cardapio
 
-- story: interactive_story_1
+- story: nao ver cardapio
   steps:
   - intent: greetings
   - action: utter_greet
-  - intent: order
-  - action: utter_cheer_up
+  - intent: negativo
+  - action: utter_disposicao
 
-- story: interactive_story_1
-  steps:
-  - intent: greetings
-  - action: utter_greet
-  - intent: order
-    entities:
-    - prato: baiana
-  - action: utter_cheer_up
+# - story: pronta para pedir ja pedindo
+#   steps:
+#   - intent: order
+#     entities:
+#     - prato: baiana
+#   - action: utter_conclui
+
+# - story: pronta para pedir
+#   steps:
+#   - intent: readytoorder
+#   - action: utter_orderresponse
+#   - intent: order
+#     entities:
+#     - prato: baiana
+#   - action: utter_conclui
+
+

@@ -79,7 +79,6 @@ nlu:
     - Gostaria de pedir uma [lombo canadense](prato) e uma [coca](bebida)
     - Quero pedir uma pizza de [filé com rúcula](prato) e um [guarana](bebida)
     - Gostaria de uma pizza de [bacon](prato) e
-    - Sim
     - Me vê uma [baiana](prato)
 - intent: callwaiter
   examples: |
@@ -90,6 +89,27 @@ nlu:
     - Onde fica o banheiro
     - Quero falar com o garçom
     - Gostaria de falar com o garçom
+- intent: positivo
+  examples: |
+    - Sim
+    - S
+    - Quero
+    - Quero sim
+    - Vou querer
+    - Vamos sim
+    - Jóia
+    - Afirmativo
+    - Ok
+
+- intent: negativo
+  examples: |
+    - Não
+    - N
+    - Nao
+    - Não Quero
+    - Não vou querer
+    - Não vou
+    - Negativo
 - intent: question
   examples: |
     - Tenho uma dúvida

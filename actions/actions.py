@@ -7,9 +7,6 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-import json
-f = open('../data.json')
-
 from typing import Any, Text, Dict, List
 
 from rasa_sdk import Action, Tracker
@@ -28,19 +25,3 @@ from rasa_sdk.executor import CollectingDispatcher
 #         dispatcher.utter_message(text="Hello World!")
 #
 #         return []
-
-class ActionIngredientes(Action):
-
-    def name(self) -> Text:
-        return "action_ingredientes"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        
-        data = json.load(f)
-        str = ''.join(data['prato'][tracker.get_slot('pedido')]['ingredientes'])
-
-        dispatcher.utter_message(text=str)
-
-        return []

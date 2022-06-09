@@ -9,21 +9,50 @@ intents:
 - mood_great
 - mood_unhappy
 - order
+- positivo
+- negativo
+- readytoorder
 entities:
 - prato
 - bebida
 - tamanho
 - indrediente
+
+slots:
+  bebida:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bebida
+  pizzasabor:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: prato
+
+forms:
+  order_form:
+    required_slots:
+        - pizzasabor        
+        - bebida
+
+
 responses:
   utter_greet:
   - text: Olá, bem vindo ao restaurante CyberKing, gostaria de fazer um pedido?
-  utter_cheer_up:
+  utter_cardapio:
   - text: 'Aqui está nosso cardápio:'
-    image: Link do cardápio
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_happy:
-  - text: Great, carry on!
+    image: https://marketplace.canva.com/EAE6nMpbwAA/1/0/1131w/canva-card%C3%A1pio-0PSak6RSR3o.jpg
+  utter_disposicao:
+  - text: Até mais então, se quiser fazer algum pedido é só me chamar.
+  utter_orderresponse:
+  - text: Ok, estou anotando.
+  utter_ask_pizzasabor:
+  - text: Qual sabor da pizza?
+  utter_ask_bebida:
+  - text: Qual bebida?
+  utter_conclui:
+  - text: Anotado chefe! Você pediu uma pizza de {pizzasabor} e uma {bebida}.
   utter_goodbye:
   - text: Bye
   utter_iamabot:
