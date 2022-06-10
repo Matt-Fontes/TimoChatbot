@@ -49,5 +49,14 @@
                 ]
             }
         }
+    ],
+    "bebida": [
+        "coca cola",
+        "guarana"
+    ],
+    "tamanhopizza": [
+        "pequena",
+        "media",
+        "grande"
     ]
 }

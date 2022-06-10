@@ -126,3 +126,9 @@ nlu:
 - synonym: requeijao
   examples: |
     - requeijão
+- synonym: guarana
+  examples: |
+    - guaraná
+- synonym: media
+  examples: |
+    - média

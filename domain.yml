@@ -19,21 +19,27 @@ entities:
 - indrediente
 
 slots:
-  bebida:
-    type: text
-    mappings:
-    - type: from_entity
-      entity: bebida
   pizzasabor:
     type: text
     mappings:
     - type: from_entity
       entity: prato
+  tamanhopizza:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tamanho
+  bebida:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bebida
 
 forms:
   order_form:
     required_slots:
         - pizzasabor        
+        - tamanhopizza
         - bebida
 
 
@@ -49,6 +55,8 @@ responses:
   - text: Ok, estou anotando.
   utter_ask_pizzasabor:
   - text: Qual sabor da pizza?
+  utter_ask_tamanhopizza:
+  - text: Qual tamanho de pizza gostaria?
   utter_ask_bebida:
   - text: Qual bebida?
   utter_conclui:
@@ -63,3 +71,4 @@ session_config:
 actions:
 - utter_cheer_up
 - utter_greet
+- validate_order_form

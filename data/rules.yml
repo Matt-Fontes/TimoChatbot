@@ -7,11 +7,11 @@ rules:
   - action: order_form
   - active_loop: order_form
 
-- rule: Activate form
-  steps:
-  - intent: order
-  - action: order_form
-  - active_loop: order_form
+# - rule: Activate form
+#   steps:
+#   - intent: order
+#   - action: order_form
+#   - active_loop: order_form
 
 - rule: Submit form
   condition:
