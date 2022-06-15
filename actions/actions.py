@@ -54,21 +54,21 @@ class ValidatePizza(FormValidationAction):
     def validate_pizzasabor(
         self,
         dispatcher: CollectingDispatcher,
-        slot_value: any,
+        slot_value: Any,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
 
-        # data = json.loads(f)
-        dispatcher.utter_message(text='passei aqui pizza')
-        # if slot_value.lower() not in data.pratos.keys():
-        #     dispatcher.utter_message(text='Não temos pizza de {slot_value} no cardápio')
-        #     return {'pizzasabor': None}
+        data = json.loads(f)
+        # dispatcher.utter_message(text='passei aqui pizza')
+        if slot_value.lower() not in data.pratos.keys():
+            dispatcher.utter_message(text='Não temos pizza de {slot_value} no cardápio')
+            return {'pizzasabor': None}
         return {'pizzasabor': slot_value}
 
     def validate_tamanhopizza(
         self,
         dispatcher: CollectingDispatcher,
-        slot_value: any,
+        slot_value: Any,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
         dispatcher.utter_message(text='passei aqui tamanho')
@@ -82,7 +82,7 @@ class ValidatePizza(FormValidationAction):
     def validate_bebida(
         self,
         dispatcher: CollectingDispatcher,
-        slot_value: any,
+        slot_value: Any,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
         dispatcher.utter_message(text='passei aqui bebida')
