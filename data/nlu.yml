@@ -42,16 +42,16 @@ nlu:
   examples: |
     - O que vem na pizza de [frango](prato)
     - Quais os ingredientes da pizza de [bacon](prato)
-    - O que acompanha a pizza [califórnia]{"entity": "prato", "value": "california"}
+    - O que acompanha a pizza [california]{"entity": "prato", "value": "california"}
     - Tem [cebola](ingrediente) na [baiana](prato)
     - Quantas pessoas serve a pizza de [palmito com catupiry](prato)
     - Serve quantos pessoas a [romeu e julieta](prato)
     - Pode tirar [milho](ingrediente) da [portuguesa](prato)
-    - Qual o tamanho da [coca-cola]{"entity": "bebida", "value": "coca cola"}
-    - A pizza de [frango com catupiry](prato) é feita com [requeijão]{"entity": "ingrediente", "value": "requeijao"} ou [catupiry](ingrediente)
+    - Qual o tamanho da [coca cola]{"entity": "bebida", "value": "coca cola"}
+    - A pizza de [frango com catupiry](prato) é feita com [requeijao]{"entity": "ingrediente", "value": "requeijao"} ou [catupiry](ingrediente)
 - intent: order
   examples: |
-    - Vou querer uma pizza de [atum](prato)[extra grande](tamanho)
+    - Vou querer uma pizza de [atum](prato) [extra grande](tamanho)
     - Gostaria de uma pizza de [bacon](prato)
     - Me vê uma [baiana](prato)
     - Vou querer uma [calabresa](prato)
@@ -72,7 +72,7 @@ nlu:
     - Vou querer uma [strogonoff](prato) e uma [coca-cola](bebida)
     - Vou querer um [salaminho ao caputiry](prato)
     - Vou querer duas pizzas de [sanduba](prato) e uma [coca-cola]{"entity": "bebida", "value": "coca cola"}
-    - Vou querer tres [califórnia]{"entity": "prato", "value": "california"} [metro s/ borda](tamanho)
+    - Vou querer tres [california]{"entity": "prato", "value": "california"} [metro s/ borda](tamanho)
     - Vou querer duas de [chocolate](prato)
     - Vou querer uma [romeu e julieta](prato) [pequena](tamanho)
     - Vou querer uma [brigadeiro](prato) [media](tamanho)
@@ -123,12 +123,17 @@ nlu:
 - synonym: coca cola
   examples: |
     - coca-cola
+    - coca
+    - coke
+    - cocacola
+    - coca lata
 - synonym: requeijao
   examples: |
     - requeijão
 - synonym: guarana
   examples: |
     - guaraná
+    - guarana lata
 - synonym: media
   examples: |
     - média

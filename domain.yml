@@ -1,17 +1,14 @@
 version: '3.1'
 intents:
-- affirm
-- bot_challenge
-- deny
-- goodbye
-- greet
 - greetings
-- mood_great
-- mood_unhappy
 - order
 - positivo
 - negativo
 - readytoorder
+- callwaiter
+- goodbye
+- question
+- foodquestion
 entities:
 - prato
 - bebida
@@ -21,16 +18,19 @@ entities:
 slots:
   pizzasabor:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: prato
   tamanhopizza:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: tamanho
   bebida:
     type: text
+    influence_conversation: true
     mappings:
     - type: from_entity
       entity: bebida
@@ -61,14 +61,9 @@ responses:
   - text: Qual bebida?
   utter_conclui:
   - text: Anotado chefe! Você pediu uma pizza de {pizzasabor} e uma {bebida}.
-  utter_goodbye:
-  - text: Bye
-  utter_iamabot:
-  - text: I am a bot, powered by Rasa.
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
 actions:
-- utter_cheer_up
 - utter_greet
 - validate_order_form

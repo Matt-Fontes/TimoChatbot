@@ -7,8 +7,11 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 
-# import json
-# f = open('data.json')
+import json
+f = open('data.json')
+data = json.load(f)
+f.close()
+
 
 from typing import Any, Text, Dict, List
 
@@ -53,22 +56,21 @@ class ValidatePizza(FormValidationAction):
 
     def validate_pizzasabor(
         self,
-        dispatcher: CollectingDispatcher,
         slot_value: Any,
+        dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
 
-        data = json.loads(f)
-        # dispatcher.utter_message(text='passei aqui pizza')
-        if slot_value.lower() not in data.pratos.keys():
-            dispatcher.utter_message(text='Não temos pizza de {slot_value} no cardápio')
+        dispatcher.utter_message(text='passei aqui pizza')
+        if slot_value.lower() not in data['prato'].keys():
+            dispatcher.utter_message(text='Não temos pizza de ' + str(slot_value) + ' no cardápio')
             return {'pizzasabor': None}
         return {'pizzasabor': slot_value}
 
     def validate_tamanhopizza(
         self,
-        dispatcher: CollectingDispatcher,
         slot_value: Any,
+        dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
         dispatcher.utter_message(text='passei aqui tamanho')
@@ -81,8 +83,8 @@ class ValidatePizza(FormValidationAction):
 
     def validate_bebida(
         self,
-        dispatcher: CollectingDispatcher,
         slot_value: Any,
+        dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
         dispatcher.utter_message(text='passei aqui bebida')
