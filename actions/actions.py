@@ -61,7 +61,6 @@ class ValidatePizza(FormValidationAction):
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
 
-        dispatcher.utter_message(text='passei aqui pizza')
         if slot_value.lower() not in data['prato'].keys():
             dispatcher.utter_message(text='Não temos pizza de ' + str(slot_value) + ' no cardápio')
             return {'pizzasabor': None}
@@ -73,12 +72,10 @@ class ValidatePizza(FormValidationAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
-        dispatcher.utter_message(text='passei aqui tamanho')
-        # data = json.loads(f)
 
-        # if slot_value.lower() not in data.tamanhopizza:
-        #     dispatcher.utter_message(text='Não temos o tamanho {slot_value} no cardápio')
-        #     return {'tamanhopizza': None}
+        if slot_value.lower() not in data['tamanhopizza']:
+             dispatcher.utter_message(text='Não temos o tamanho ' + str(slot_value) + ' no cardápio')
+             return {'tamanhopizza': None}
         return {'tamanhopizza': slot_value}
 
     def validate_bebida(
@@ -87,10 +84,8 @@ class ValidatePizza(FormValidationAction):
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
         domain: DomainDict) -> Dict[Text, Any]:
-        dispatcher.utter_message(text='passei aqui bebida')
-        # data = json.loads(f)
 
-        # if slot_value.lower() not in data.bebida:
-        #     dispatcher.utter_message(text='Não temos a bebida {slot_value} no cardápio')
-        #     return {'bebida': None}
+        if slot_value.lower() not in data['bebida']:
+            dispatcher.utter_message(text='Não temos a bebida ' + str(slot_value) + ' no cardápio')
+            return {'bebida': None}
         return {'bebida': slot_value}
