@@ -7,11 +7,11 @@ rules:
   - action: order_form
   - active_loop: order_form
 
-- rule: Activate form
-  steps:
-  - intent: order
-  - action: order_form
-  - active_loop: order_form
+# - rule: Activate form
+#   steps:
+#   - intent: order
+#   - action: order_form
+#   - active_loop: order_form
 
 - rule: Submit form
   condition:
@@ -25,3 +25,5 @@ rules:
     - requested_slot: null
   # The actions we want to run when the form is submitted.
   - action: utter_conclui
+  #- action: action_calcula_conta
+  #- action: action_zera_slots
